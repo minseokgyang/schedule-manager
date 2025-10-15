@@ -13,9 +13,6 @@ MySQL 데이터베이스에 저장된 일정을 손쉽게 관리할 수 있습�
 ├── setup.py # 패키지 설정 파일<br>
 └── README.md # 프로젝트 설명 파일<br>
 
-yaml
-코드 복사
-
 ---
 
 ## ⚙️ 주요 기능
@@ -53,17 +50,18 @@ CREATE TABLE schedules (
     is_completed BOOLEAN DEFAULT FALSE
 );
 ```
-2️⃣ 접속 정보 (기본값)
+**2️⃣ 접속 정보 (기본값)**
 localhost:3307, user=root, password=1234, database=schedule_db
 
 ⚠️ 필요 시 schedule_manager.py 내 get_db_connection() 함수를 수정하세요.
 
-🚀 설치 및 실행 방법
-1️⃣ 패키지 설치
+## 🚀 설치 및 실행 방법
+**1️⃣ 패키지 설치**
+
 bash
 코드 복사
-pip install .
-2️⃣ 콘솔 명령어로 실행
+pip install .<br>
+**2️⃣ 콘솔 명령어로 실행**
 설치 후 아래 명령어로 바로 실행할 수 있습니다:
 
 bash
@@ -74,20 +72,22 @@ myschedule
 bash
 코드 복사
 python schedule_manager.py
-🧭 메뉴 구성
+<br>
+
+## 🧭 메뉴 구성
 번호	동작	설명
 1	일정 추가	일정 정보를 입력받아 DB에 저장
 2	일정 보기	등록된 모든 일정 출력
 3	일정 완료	특정 ID의 일정을 완료 처리
 4	종료	프로그램 종료
 
-🧩 setup.py 주요 설정
+## 🧩 setup.py 주요 설정
 python
 코드 복사
 entry_points={
     "console_scripts": [
         "myschedule=schedule_manager:main"
-        ]
+    ]
 }
 이 설정 덕분에 myschedule 명령어로 프로그램을 직접 실행할 수 있습니다.
 
@@ -112,5 +112,5 @@ raise NotImplementedError("함수 미구현")이 포함되어 있습니다.
 자유롭게 수정 및 배포 가능합니다.
 
 👤 작성자
-Author: YangMinseok
+Author: YangMinseok<br>
 📧 이메일: minseokgyang@gmail.com
