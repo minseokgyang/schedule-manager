@@ -8,10 +8,10 @@ MySQL 데이터베이스에 저장된 일정을 손쉽게 관리할 수 있습�
 
 ## 📦 프로젝트 구조
 
-📁 project_root
-├── schedule_manager.py # 메인 프로그램 (일정 관리 로직)
-├── setup.py # 패키지 설정 파일
-└── README.md # 프로젝트 설명 파일
+📁 project_root<br>
+├── schedule_manager.py # 메인 프로그램 (일정 관리 로직)<br>
+├── setup.py # 패키지 설정 파일<br>
+└── README.md # 프로젝트 설명 파일<br>
 
 yaml
 코드 복사
@@ -52,6 +52,7 @@ CREATE TABLE schedules (
     end_datetime VARCHAR(14),
     is_completed BOOLEAN DEFAULT FALSE
 );
+```
 2️⃣ 접속 정보 (기본값)
 localhost:3307, user=root, password=1234, database=schedule_db
 
@@ -86,7 +87,7 @@ python
 entry_points={
     "console_scripts": [
         "myschedule=schedule_manager:main"
-    ]
+        ]
 }
 이 설정 덕분에 myschedule 명령어로 프로그램을 직접 실행할 수 있습니다.
 
